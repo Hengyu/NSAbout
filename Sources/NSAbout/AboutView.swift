@@ -6,6 +6,7 @@
 //  Copyright © 2021 hengyu. All rights reserved.
 //
 
+#if canImport(AppKit) && os(macOS)
 import AppKit
 
 public final class AboutView: NSView {
@@ -145,3 +146,4 @@ public final class AboutView: NSView {
         imageTapped?()
     }
 }
+#endif

@@ -6,6 +6,7 @@
 //  Copyright © 2021 hengyu. All rights reserved.
 //
 
+#if canImport(AppKit) && canImport(Cocoa) && os(macOS)
 import AppKit
 import Cocoa
 
@@ -63,3 +64,4 @@ public final class AboutWindowController: NSWindowController {
         }
     }
 }
+#endif

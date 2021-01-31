@@ -6,6 +6,7 @@
 //  Copyright © 2021 hengyu. All rights reserved.
 //
 
+#if canImport(AppKit) && os(macOS)
 import AppKit
 
 final class AboutWindow: NSWindow {
@@ -26,3 +27,4 @@ final class AboutWindow: NSWindow {
         isReleasedWhenClosed = true
     }
 }
+#endif

@@ -11,10 +11,12 @@ import Foundation
 public struct AboutStyle {
 
     public var enablesWindowShadow: Bool = true
+    #if os(macOS)
     public var windowRect: NSRect = .init(
         origin: CGPoint(x: 600, y: 500),
         size: CGSize(width: 480, height: 160)
     )
+    #endif
 
     public static let standard: AboutStyle = .init()
 
