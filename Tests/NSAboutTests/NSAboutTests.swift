@@ -15,15 +15,11 @@ final class NSAboutTests: XCTestCase {
         XCTAssertEqual(content.name, "App Name")
         XCTAssertEqual(content.version, "1.0")
         XCTAssertEqual(content.info, "Designed by Hengyu")
+        XCTAssertEqual(content.closeKeyCodes, [0x31, 0x35])
     }
 
     func testAboutStyle() {
         let style = AboutStyle.standard
         XCTAssertEqual(style.enablesWindowShadow, true)
     }
-
-    static var allTests = [
-        ("testAboutContent", testAboutContent),
-        ("testAboutStyle", testAboutStyle)
-    ]
 }
