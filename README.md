@@ -2,9 +2,7 @@
 
 <img width=480 src="Images/example.png">
 
-## About
-
-`NSAbout` provides a simple about window for macOS.
+`NSAbout` is a super simple about window for macOS platform.
 
 ## Usage
 
@@ -26,10 +24,13 @@ aboutWindow.showWindow(nil)
 
 ### Swift Package Manager
 
-1. Add package dependency [NSAbout](https://github.com/Hengyu/NSAbout.git) into your project;
-2. Import `NSAbout` module in your code.
+[NSAbout](https://github.com/hengyu/NSAbout.git) could be installed via [Swift Package Manager](https://www.swift.org/package-manager/). Open Xcode and go to **File** -> **Add Packages...**, search `https://github.com/hengyu/NSAbout.git`, and add the package as one of your project's dependency.
 
 ### Manual
 
 1. Download code from [GitHub](https://github.com/Hengyu/NSAbout);
 2. Drag & drop the `Sources` folder into your project.
+
+## License
+
+[NSAbout](https://github.com/Hengyu/NSAbout.git) is released under the [MIT License](LICENSE).
