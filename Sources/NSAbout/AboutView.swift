@@ -92,6 +92,8 @@ public final class AboutView: NSView {
         infoLabel.drawsBackground = false
         infoLabel.isBezeled = false
         infoLabel.isBordered = false
+        infoLabel.maximumNumberOfLines = 3
+        infoLabel.preferredMaxLayoutWidth = 320
 
         topContainer.orientation = .vertical
         topContainer.alignment = .leading
