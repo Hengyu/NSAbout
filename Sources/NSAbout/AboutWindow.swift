@@ -25,6 +25,11 @@ final class AboutWindow: NSWindow {
         isRestorable = true
         titlebarAppearsTransparent = true
         isReleasedWhenClosed = true
+
+        collectionBehavior = [.transient, .ignoresCycle]
+        isMovableByWindowBackground = true
+        titlebarAppearsTransparent = true
+        titleVisibility = .hidden
     }
 }
 #endif
