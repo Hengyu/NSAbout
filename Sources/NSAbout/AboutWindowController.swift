@@ -12,7 +12,7 @@ import Cocoa
 
 public final class AboutWindowController: NSWindowController {
     public var url: URL?
-    public var closeKeyCodes: [UInt16]?
+    public var closeKeyCodes: [Int]?
 
     private var aboutView: AboutView = .init(frame: .zero)
 
@@ -36,6 +36,12 @@ public final class AboutWindowController: NSWindowController {
                 self.visitWebsite(url)
             }
         }
+
+        // simple override `keyDown(with:)` will not working with escape key press,
+        // use the `NSEvent.addLocalMonitorForEvents(matching:)` to solve the problem
+        NSEvent.addLocalMonitorForEvents(matching: .keyDown) {
+            self.keyDown(with: $0)
+        }
     }
 
     public func setContent(_ content: AboutContent) {
@@ -50,17 +56,23 @@ public final class AboutWindowController: NSWindowController {
         NSWorkspace.shared.open(url)
     }
 
-    public override func keyDown(with event: NSEvent) {
-        guard let window = window, let closeKeyCodes = closeKeyCodes else { return }
+    private func keyDown(with event: NSEvent) -> NSEvent? {
+        if closeKeyCodes?.contains(Int(event.keyCode)) == true {
+            dismissWindow()
+            return nil
+        }
+        return event
+    }
 
-        if closeKeyCodes.contains(event.keyCode) {
-            NSAnimationContext.runAnimationGroup({ context in
-                context.duration = 1
-                window.animator().alphaValue = 0
-            }, completionHandler: {
-                self.close()
-                window.alphaValue = 1
-            })
+    private func dismissWindow() {
+        guard let window = window else { return }
+
+        NSAnimationContext.runAnimationGroup { context in
+            context.duration = 1
+            window.animator().alphaValue = 0
+        } completionHandler: {
+            self.close()
+            window.alphaValue = 1
         }
     }
 }

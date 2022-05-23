@@ -6,25 +6,26 @@
 //  Copyright © 2021 hengyu. All rights reserved.
 //
 
+import Carbon.HIToolbox
 import Foundation
 
 public struct AboutContent {
 
-    public static let spaceKeyCode: UInt16 = 0x31
-    public static let escapeKeyCode: UInt16 = 0x35
+    public static let spaceKeyCode: Int = kVK_Space
+    public static let escapeKeyCode: Int = kVK_Escape
 
     public let name: String
     public let version: String
     public let info: String
     public let url: URL?
-    public let closeKeyCodes: [UInt16]
+    public let closeKeyCodes: [Int]
 
     public init(
         name: String,
         version: String,
         info: String,
         url: URL? = nil,
-        closeKeyCodes: [UInt16] = [AboutContent.spaceKeyCode, AboutContent.escapeKeyCode]
+        closeKeyCodes: [Int] = [AboutContent.spaceKeyCode, AboutContent.escapeKeyCode]
     ) {
         self.name = name
         self.version = version
