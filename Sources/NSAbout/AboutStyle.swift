@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct AboutStyle {
+public struct AboutStyle: Codable, Equatable, Sendable {
 
     public var enablesWindowShadow: Bool = true
     #if os(macOS)

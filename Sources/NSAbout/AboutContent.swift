@@ -9,7 +9,7 @@
 import Carbon.HIToolbox
 import Foundation
 
-public struct AboutContent {
+public struct AboutContent: Codable, Equatable, Sendable {
 
     public static let spaceKeyCode: Int = kVK_Space
     public static let escapeKeyCode: Int = kVK_Escape
