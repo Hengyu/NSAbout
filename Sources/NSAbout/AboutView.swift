@@ -69,9 +69,9 @@ public final class AboutView: NSView {
         imageButton.imagePosition = .imageOverlaps
         NSImage(named: NSImage.applicationIconName).map { imageButton.image = $0 }
 
+        nameLabel.font = .systemFont(ofSize: 36, weight: .light)
+        versionLabel.font = .systemFont(ofSize: 14, weight: .regular)
         if #available(OSX 11.0, *) {
-            nameLabel.font = .systemFont(ofSize: 36, weight: .light)
-            versionLabel.font = .systemFont(ofSize: 14, weight: .regular)
             infoLabel.font = .preferredFont(forTextStyle: .caption2, options: [:])
         }
         nameLabel.textColor = .controlTextColor
