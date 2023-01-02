@@ -10,7 +10,7 @@ jobs:
   main:
     runs-on: macos-latest
     steps:
-      - uses: swift-actions/setup-swift@v1.15.0
+      - uses: swift-actions/setup-swift@v1.21.0
         with:
           swift-version: "5.6.0"
       - uses: actions/checkout@v3
