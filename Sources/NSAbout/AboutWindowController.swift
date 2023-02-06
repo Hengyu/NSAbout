@@ -32,8 +32,8 @@ public final class AboutWindowController: NSWindowController {
     private func commonInit() {
         windowFrameAutosaveName = AboutWindow.autosaveName
         aboutView.imageTapped = { [unowned self] in
-            if let url = self.url {
-                self.visitWebsite(url)
+            if let url = url {
+                visitWebsite(url)
             }
         }
 
