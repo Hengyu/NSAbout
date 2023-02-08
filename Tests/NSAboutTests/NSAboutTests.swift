@@ -11,7 +11,7 @@ import XCTest
 
 final class NSAboutTests: XCTestCase {
     func testAboutContent() {
-        let content = AboutContent(name: "App Name", version: "1.0", info: "Designed by Hengyu")
+        let content = AboutContent(name: "App Name", version: "1.0", info: "Designed by Hengyu", closeKeyCodes: [0x31, 0x35])
         XCTAssertEqual(content.name, "App Name")
         XCTAssertEqual(content.version, "1.0")
         XCTAssertEqual(content.info, "Designed by Hengyu")
