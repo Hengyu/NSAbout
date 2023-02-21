@@ -21,6 +21,7 @@
 //  SOFTWARE.
 //
 
+#if os(macOS)
 @testable import NSAbout
 import XCTest
 
@@ -38,3 +39,4 @@ final class NSAboutTests: XCTestCase {
         XCTAssertEqual(style.enablesWindowShadow, true)
     }
 }
+#endif
