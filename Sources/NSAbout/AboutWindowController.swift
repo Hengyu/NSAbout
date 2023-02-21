@@ -49,7 +49,7 @@ public final class AboutWindowController: NSWindowController {
     private func commonInit() {
         windowFrameAutosaveName = AboutWindow.autosaveName
         aboutView.imageTapped = { [unowned self] in
-            if let url = url {
+            if let url {
                 visitWebsite(url)
             }
         }
@@ -82,7 +82,7 @@ public final class AboutWindowController: NSWindowController {
     }
 
     private func dismissWindow() {
-        guard let window = window else { return }
+        guard let window else { return }
 
         NSAnimationContext.runAnimationGroup { context in
             context.duration = 1
