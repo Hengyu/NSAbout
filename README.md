@@ -1,8 +1,23 @@
 # NSAbout
 
+![](https://img.shields.io/badge/macOS-10.14%2B-green)
+![](https://img.shields.io/badge/Swift-5-orange?logo=Swift&logoColor=white)
+![](https://img.shields.io/github/last-commit/hengyu/NSAbout)
+
 <img width=480 src="Images/example.png">
 
-`NSAbout` is a super simple about window for macOS platform.
+**NSAbout** is a super simple about window for macOS platform.
+
+## Table of contents
+
+* [Requirements](#requirements)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+
+## Requirements
+
+- macOS 10.14+
 
 ## Usage
 
